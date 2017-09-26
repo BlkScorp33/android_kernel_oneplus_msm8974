@@ -284,7 +284,7 @@ libs-y				:= arch/arm/lib/ $(libs-y)
 ifeq ($(CONFIG_XIP_KERNEL),y)
 KBUILD_IMAGE := xipImage
 else ifeq ($(CONFIG_BUILD_ARM_APPENDED_DTB_IMAGE),y)
-KBUILD_IMAGE	:= $(subst $\",,$(CONFIG_BUILD_ARM_APPENDED_KERNEL_IMAGE_NAME))
+KBUILD_IMAGE := zImage-dtb
 else
 KBUILD_IMAGE := zImage
 endif
